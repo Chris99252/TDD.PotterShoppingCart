@@ -8,7 +8,6 @@ namespace PotterShoppingCart.Service.Chris
 {
     public class PotterShopping
     {
-
         public double PotterCalculator(Dictionary<string, double> potterBooks)
         {
             double total = 0;
@@ -47,6 +46,7 @@ namespace PotterShoppingCart.Service.Chris
                         kindCount2 += 1;
                     }
                 }
+                // 只買一個種類，不打折
                 if (kindCount2 == 1)
                 {
                     total = total + (data.ElementAt(1).Value - data.ElementAt(0).Value) * 100;
@@ -65,7 +65,7 @@ namespace PotterShoppingCart.Service.Chris
                         kindCount2 += 1;
                     }
                 }
-
+                // 買兩個種類，一組打九五折
                 if (kindCount2 == 2)
                 {
                     total = total + (data.ElementAt(1).Value - data.ElementAt(0).Value) * 2 * 100 * 0.95;
@@ -77,11 +77,13 @@ namespace PotterShoppingCart.Service.Chris
                             kindCount3 += 1;
                         }
                     }
+                    // 只買一個種類，不打折
                     if (kindCount3 == 1)
                     {
                         total = total + (data.ElementAt(2).Value - data.ElementAt(1).Value) * 100;
                     }
                 }
+                // 只買一個種類，不打折
                 else if (kindCount2 == 1)
                 {
                     total = total + (data.ElementAt(2).Value - data.ElementAt(1).Value) * 100;
@@ -100,7 +102,7 @@ namespace PotterShoppingCart.Service.Chris
                         kindCount2 += 1;
                     }
                 }
-
+                // 買三個種類，一組打九折
                 if (kindCount2 == 3)
                 {
                     total = total + (data.ElementAt(1).Value - data.ElementAt(0).Value) * 3 * 100 * 0.9;
@@ -113,7 +115,7 @@ namespace PotterShoppingCart.Service.Chris
                             kindCount3 += 1;
                         }
                     }
-
+                    // 買兩個種類，一組打九五折
                     if (kindCount3 == 2)
                     {
                         total = total + (data.ElementAt(2).Value - data.ElementAt(1).Value) * 2 * 100 * 0.95;
@@ -125,16 +127,19 @@ namespace PotterShoppingCart.Service.Chris
                                 kindCount4 += 1;
                             }
                         }
+                        // 只買一個種類，不打折
                         if (kindCount4 == 1)
                         {
                             total = total + (data.ElementAt(3).Value - data.ElementAt(2).Value) * 100;
                         }
                     }
+                    // 只買一個種類，不打折
                     else if (kindCount3 == 1)
                     {
                         total = total + (data.ElementAt(3).Value - data.ElementAt(2).Value) * 100;
                     }
                 }
+                // 買兩個種類，一組打九五折
                 else if (kindCount2 == 2)
                 {
                     total = total + (data.ElementAt(2).Value - data.ElementAt(1).Value) * 2 * 100 * 0.95;
@@ -146,11 +151,13 @@ namespace PotterShoppingCart.Service.Chris
                             kindCount3 += 1;
                         }
                     }
+                    // 只買一個種類，不打折
                     if (kindCount3 == 1)
                     {
                         total = total + (data.ElementAt(3).Value - data.ElementAt(2).Value) * 100;
                     }
                 }
+                // 只買一個種類，不打折
                 else if (kindCount2 == 1)
                 {
                     total = total + (data.ElementAt(3).Value - data.ElementAt(2).Value) * 100;
@@ -169,6 +176,7 @@ namespace PotterShoppingCart.Service.Chris
                         kindCount2 += 1;
                     }
                 }
+                // 買四個種類，一組打八折
                 if (kindCount2 == 4)
                 {
                     total = (data.ElementAt(1).Value - data.ElementAt(0).Value) * 4 * 100 * 0.8;
@@ -181,7 +189,7 @@ namespace PotterShoppingCart.Service.Chris
                             kindCount3 += 1;
                         }
                     }
-
+                    // 買三個種類，一組打九折
                     if (kindCount3 == 3)
                     {
                         total = total + (data.ElementAt(2).Value - data.ElementAt(1).Value) * 3 * 100 * 0.9;
@@ -194,7 +202,7 @@ namespace PotterShoppingCart.Service.Chris
                                 kindCount4 += 1;
                             }
                         }
-
+                        // 買兩個種類，一組打九五折
                         if (kindCount4 == 2)
                         {
                             total = total + (data.ElementAt(3).Value - data.ElementAt(2).Value) * 2 * 100 * 0.95;
@@ -206,16 +214,19 @@ namespace PotterShoppingCart.Service.Chris
                                     kindCount5 += 1;
                                 }
                             }
+                            // 只買一個種類，不打折
                             if (kindCount5 == 1)
                             {
                                 total = total + (data.ElementAt(4).Value - data.ElementAt(3).Value) * 100;
                             }
                         }
+                        // 只買一個種類，不打折
                         else if (kindCount4 == 1)
                         {
                             total = total + (data.ElementAt(4).Value - data.ElementAt(3).Value) * 100;
                         }
                     }
+                    // 買兩個種類，一組打九五折
                     else if (kindCount3 == 2)
                     {
                         total = total + (data.ElementAt(3).Value - data.ElementAt(2).Value) * 2 * 100 * 0.95;
@@ -227,11 +238,13 @@ namespace PotterShoppingCart.Service.Chris
                                 kindCount5 += 1;
                             }
                         }
+                        // 只買一個種類，不打折
                         if (kindCount5 == 1)
                         {
                             total = total + (data.ElementAt(4).Value - data.ElementAt(3).Value) * 100;
                         }
                     }
+                    // 只買一個種類，不打折
                     else if (kindCount3 == 1)
                     {
                         total = total + (data.ElementAt(4).Value - data.ElementAt(3).Value) * 100;
@@ -249,7 +262,7 @@ namespace PotterShoppingCart.Service.Chris
                             kindCount3 += 1;
                         }
                     }
-
+                    // 買兩個種類，一組打九五折
                     if (kindCount3 == 2)
                     {
                         total = total + (data.ElementAt(3).Value - data.ElementAt(2).Value) * 2 * 100 * 0.95;
@@ -261,16 +274,19 @@ namespace PotterShoppingCart.Service.Chris
                                 kindCount4 += 1;
                             }
                         }
+                        // 只買一個種類，不打折
                         if (kindCount4 == 1)
                         {
                             total = total + (data.ElementAt(4).Value - data.ElementAt(3).Value) * 100;
                         }
                     }
+                    // 只買一個種類，不打折
                     else if (kindCount3 == 1)
                     {
                         total = total + (data.ElementAt(4).Value - data.ElementAt(3).Value) * 100;
                     }
                 }
+                // 買兩個種類，一組打九五折
                 else if (kindCount2 == 2)
                 {
                     total = total + (data.ElementAt(3).Value - data.ElementAt(2).Value) * 2 * 100 * 0.95;
@@ -282,11 +298,13 @@ namespace PotterShoppingCart.Service.Chris
                             kindCount3 += 1;
                         }
                     }
+                    // 只買一個種類，不打折
                     if (kindCount3 == 1)
                     {
                         total = total + (data.ElementAt(4).Value - data.ElementAt(3).Value) * 100;
                     }
                 }
+                // 只買一個種類，不打折
                 else if (kindCount2 == 1)
                 {
                     total = total + (data.ElementAt(4).Value - data.ElementAt(3).Value) * 100;
