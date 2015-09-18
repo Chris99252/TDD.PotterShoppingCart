@@ -21,6 +21,10 @@ namespace PotterShoppingCart.Service.Chris
             {
                 total = bookCount * 100 * 0.95;
             }
+            else if (bookCount == 3)
+            {
+                total = bookCount * 100 * 0.9;
+            }
             return total;
         }
     }

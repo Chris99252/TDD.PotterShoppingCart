@@ -58,5 +58,30 @@ namespace PotterShoppingCart.Tests.Chris
             // assert
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// Scenario: 一二三集各買了一本，價格應為100*3*0.9=270
+        /// </summary>
+        [TestMethod]
+        public void BuyThreeBook_一二三集各買了一本_價格應為270元()
+        {
+            // arrange
+            var target = new PotterShopping();
+
+            Dictionary<string, double> potterBooks = new Dictionary<string, double>();
+            potterBooks.Add("episode1", 1);
+            potterBooks.Add("episode2", 1);
+            potterBooks.Add("episode3", 1);
+            potterBooks.Add("episode4", 0);
+            potterBooks.Add("episode5", 0);
+
+            double expected = 270;
+
+            // act
+            double actual = target.PotterCalculator(potterBooks);
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
