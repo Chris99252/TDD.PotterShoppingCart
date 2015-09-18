@@ -53,6 +53,12 @@
     <Compile Include="PotterShoppingCartTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PotterShoppingCart.Service.Chris\PotterShoppingCart.Service.Chris.csproj">
+      <Project>{14061fd6-9a5a-4985-a083-7c79c14fe292}</Project>
+      <Name>PotterShoppingCart.Service.Chris</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

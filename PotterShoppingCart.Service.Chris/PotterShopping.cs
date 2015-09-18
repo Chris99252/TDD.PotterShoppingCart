@@ -8,5 +8,10 @@ namespace PotterShoppingCart.Service.Chris
 {
     public class PotterShopping
     {
+
+        public double PotterCalculator(Dictionary<string, double> potterBooks)
+        {
+            return 100;
+        }
     }
 }
