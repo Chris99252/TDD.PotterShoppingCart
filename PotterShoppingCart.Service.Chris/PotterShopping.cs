@@ -11,7 +11,13 @@ namespace PotterShoppingCart.Service.Chris
 
         public double PotterCalculator(Dictionary<string, double> potterBooks)
         {
-            return 100;
+            double total = 0;
+            var bookCount = potterBooks.Sum(x => x.Value);
+            if (bookCount == 1)
+            {
+                total = bookCount * 100;
+            }
+            return total;
         }
     }
 }
